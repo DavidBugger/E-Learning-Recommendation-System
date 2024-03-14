@@ -1,0 +1,261 @@
+{% comment %} {% load compress %} {% endcomment %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning | System</title>
+    {% comment %} <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+
+    {% compress css %}
+    <link rel="stylesheet" href="{% static 'src/output.css' %}">
+    {% endcompress %} {% endcomment %}
+
+    <link rel="shortcut icon" href="{% static 'image/png/favicon.png' %}"  type="image/x-icon">
+  <!-- Bootstrap , fonts & icons  -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/icon-font/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/typography-font/typo.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/fontawesome-5/css/all.css' %}">
+  <!-- Plugin'stylesheets  -->
+  <link rel="stylesheet" href="{% static 'plugins/aos/aos.min.css' %}">
+  <link rel="stylesheet" href="{% static 'plugins/fancybox/jquery.fancybox.min.css' %}">
+  <link rel="stylesheet" href="{% static 'plugins/nice-select/nice-select.min.css' %}">
+  <link rel="stylesheet" href="{% static 'plugins/slick/slick.min.css' %}">
+  <!-- Vendor stylesheets  -->
+  {% comment %} <link rel="stylesheet" href="static/plugins/theme-mode-switcher/switcher-panel.css"> {% endcomment %}
+  <link rel="stylesheet" href="{%static 'css/main.css' %}">
+
+</head>
+
+<body data-theme-mode-panel-active data-theme="light">
+  <div class="site-wrapper overflow-hidden ">
+    <div id="loading">
+      <img src="{% static 'image/preloader.gif' %}" alt="">
+    </div>
+
+    <!-- Add this -->
+    <header class="site-header site-header--menu-center  dynamic-sticky-bg mt-3 mt-lg-0 site-header--absolute site-header--sticky">
+      <div class="container">
+        <nav class="navbar site-navbar">
+          <!-- Brand Logo-->
+          <div class="brand-logo">
+            <a href="../">
+              <!-- light version logo (logo must be black)-->
+              {% comment %} <img src="static/image/png/e-logo.png" alt="" class="light-version-logo"> {% endcomment %}
+              <!-- Dark version logo (logo must be White)-->
+              {% comment %} <img src="static/image/png/e-logo.png" alt="" class="dark-version-logo"> {% endcomment %}
+              <h6 class="text-secondary"><span class="text-primary"> E</span>-Learning</h6>
+            </a>
+          </div>
+          <div class="menu-block-wrapper  menu-sep-left">
+            <div class="menu-overlay"></div>
+            <nav class="menu-block" id="append-menu-header">
+              <div class="mobile-menu-head">
+                <div class="go-back">
+                  <i class="fa fa-angle-left"></i>
+                </div>
+                <div class="current-menu-title"></div>
+                <div class="mobile-menu-close">&times;</div>
+              </div>
+              <ul class="site-menu-main">
+                <li class="nav-item nav-item-has-children">
+                  <a href="/about-us" class="nav-link-item drop-trigger">About us 
+                  </a>
+                </li>
+                <li class="nav-item nav-item-has-children">
+                  <a href="/admin" class="nav-link-item drop-trigger">Login
+                  </a>
+                  
+                </li>
+                <li class="nav-item nav-item-has-children">
+                  <a href="/contact-us" class="nav-link-item drop-trigger">Contact us
+                  </a>
+                  
+                </li>
+        
+              </ul>
+            </nav>
+          </div>
+          <div class="header-btn ">
+            <a class="btn btn btn-electric-violet-2 btn--header-inner text-white rounded-50 shadow--electric-violet-2-4 ms-auto ms-lg-4 d-none d-sm-flex" href="/sign_up">
+              Get Started
+            </a>
+          </div>
+          <!-- mobile menu trigger -->
+          <div class="mobile-menu-trigger">
+            <span></span>
+          </div>
+          <!--/.Mobile Menu Hamburger Ends-->
+        </nav>
+      </div>
+    </header>
+        
+    <!-- End of new HTML -->
+
+    {% comment %} <div class="container mx-auto mt-4 "> {% endcomment %}
+        {% block content %}
+
+        {% endblock content %}
+    {% comment %} </div> {% endcomment %}
+
+  {% block footer%}
+     <!-- Footer Area -->
+  <div class="promo-area promo-area--inner-about bg-electric-violet-2">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-8">
+          <div class="promo-content dark-mode-texts text-center">
+            <h2 class="promo-content__title">Interested in joining our team? </h2>
+            <button class="btn btn-primary shadow--primary-5 btn--lg-2 rounded-50 text-white mt-5">Explore job opportunities</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="shape">
+      <img class="w-100" src="../static/image/png/inner-banner-shape.png" alt="">
+    </div>
+  </div>
+  <!--/ .Footer Area -->
+  <!-- Footer Area -->
+  <div class="footer-area footer-inner-1 position-relative bg-default-3">
+    <div class="container">
+      <footer class="footer-top">
+        <div class="row">
+          <div class="col-lg-3 col-md-7 col-xs-9">
+            <div class="footer-widgets footer-widgets--l7">
+              <!-- Brand Logo-->
+              <div class="brand-logo mt-1">
+                <a href="#">
+                  <!-- light version logo (logo must be black)-->
+                  <img src="static/image/png/logo-dark.png" alt="" class="light-version-logo">
+                  <!-- Dark version logo (logo must be White)-->
+                  <img src="static/image/png/logo-white.png" alt="" class="dark-version-logo">
+                </a>
+              </div>
+              <p class="footer-widgets__text mt-5">
+                We’re the digital agency to create<br class="d-none d-xl-block"> your digital presence for better<br class="d-none d-xl-block"> conversion and sales.</p>
+              <ul class="footer-social-share footer-social-share--rounded mt-4">
+                <li>
+                  <a href="#">
+                    <i class="fab fa-facebook-square"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-9">
+            <div class="row">
+              <div class="col-md-4 col-xs-6">
+                <div class="footer-widgets footer-widgets--l7">
+                  <h4 class="footer-widgets__title">Contact Details</h4>
+                  <ul class="footer-widgets__list footer-widgets--address">
+                    <li>
+                      <i class="fa fa-map-marker-alt text-electric-violet-2"></i>
+                      <span>Address: <br class="d-block">
+                                          4401 Waldeck Street,<br class="d-block">
+                                          Grapevine Nashville, Tx 76051</span>
+                    </li>
+                    <li>
+                      <i class="fa fa-phone-alt text-electric-violet-2"></i>
+                      <div class="list-content">
+                        <span class="d-block gr-text-hover-decoration-none"> Phone: </span>
+                        <a href="#">+99 (0) 101 0000 888</a>
+                      </div>
+                    </li>
+                    <li>
+                      <i class="fa fa-envelope text-electric-violet-2"></i>
+                      <a class="heading-default-color gr-text-hover-underline text-break" href="mailto:info@medcartel.com">
+                        <span class="d-block gr-text-hover-decoration-none"> Phone:
+                                          </span>info@medcartel.com</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-4 col-xs-6">
+                <div class="footer-widgets footer-widgets--l7 mb-10 mb-md-0">
+                  <h4 class="footer-widgets__title">Company</h4>
+                  <ul class="footer-widgets__list">
+                    <li>
+                      <a href="about-us.html">About us</a>
+                    </li>
+                    <li>
+                      <a href="terms-page.html">Privacy Policy</a>
+                    </li>
+                    <li>
+                      <a href="terms-page.html">Terms & Conditions</a>
+                    </li>
+                    <li>
+                      <a href="testimonial-1.html">Reviews</a>
+                    </li>
+                    <li>
+                      <a href="contact-1.html">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-4 col-xs-9">
+                <div class="footer-widgets footer-widgets--l7">
+                  <h4 class="footer-widgets__title">Newsletter</h4>
+                  <p class="footer-widgets__text mb-4 mt-0">Get the latest trends updates right at your inbox.</p>
+                  <!-- Newsletter -->
+                  <div class="newsletter newsletter--l7">
+                    <form action="https://finestwp.co/.">
+                      <input type="text" placeholder="Enter Your Email">
+                      <button class="btn btn-primary shadow--primary-4" type="submit">Subscribe</button>
+                    </form>
+                  </div>
+                  <!--/ .Newsletter -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="copyright text-center border-top border-default-color-3">
+        <p class="mb-0">© 2021 Fastland By FinestDevs. All Rights Reserved</p>
+      </div>
+    </div>
+  </div>
+  <!--/ .Footer Area -->
+    {% endblock footer%}
+
+    {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script> {% endcomment %}
+
+    <!-- Plugin's Scripts -->
+  <script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'plugins/jquery/jquery-migrate.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+  <script src="{% static 'plugins/fancybox/jquery.fancybox.min.js' %}"></script>
+  <script src="{% static 'plugins/nice-select/jquery.nice-select.min.js' %}"></script>
+  <script src="{% static 'plugins/aos/aos.min.js' %}"></script>
+  <script src="{% static 'plugins/counter-up/jquery.counterup.min.js' %}"></script>
+  <script src="{% static 'plugins/counter-up/waypoints.min.js' %}"></script>
+  <script src="{% static 'plugins/slick/slick.min.js' %}"></script>
+  <script src="{% static 'plugins/skill-bar/skill.bars.jquery.js' %}"></script>
+  <script src="{% static 'plugins/isotope/isotope.pkgd.min.js' %}"></script>
+  <!--<script src="./plugins/theme-mode-switcher/gr-theme-mode-switcher.js' %}"></script>-->
+  <!-- Activation Script -->
+  <script src="{%static 'js/menu.js' %}"></script>
+  <script src="{%static 'js/custom.js' %}"></script>
+    
+</body>
+</html>
