@@ -1,0 +1,69 @@
+{% extends "base/_base.html" %}
+
+{% block content%}
+
+ <!-- Add this -->
+    <header class="site-header site-header--menu-center  dynamic-sticky-bg mt-3 mt-lg-0 site-header--absolute site-header--sticky">
+      <div class="container">
+        <nav class="navbar site-navbar">
+          <!-- Brand Logo-->
+          <div class="brand-logo">
+            <a href="../">
+              <!-- light version logo (logo must be black)-->
+              {% comment %} <img src="static/image/png/e-logo.png" alt="" class="light-version-logo"> {% endcomment %}
+              <!-- Dark version logo (logo must be White)-->
+              {% comment %} <img src="static/image/png/e-logo.png" alt="" class="dark-version-logo"> {% endcomment %}
+              <h6 class="text-secondary"><span class="text-primary"> E</span>-Learning</h6>
+            </a>
+          </div>
+          <div class="menu-block-wrapper  menu-sep-left">
+            <div class="menu-overlay"></div>
+            <nav class="menu-block" id="append-menu-header">
+              <div class="mobile-menu-head">
+                <div class="go-back">
+                  <i class="fa fa-angle-left"></i>
+                </div>
+                <div class="current-menu-title"></div>
+                <div class="mobile-menu-close">&times;</div>
+              </div>
+              <ul class="site-menu-main">
+                <li class="nav-item nav-item-has-children">
+                  <a href="/about-us" class="nav-link-item drop-trigger">About us 
+                  </a>
+                </li>
+                <li class="nav-item nav-item-has-children">
+                  <a href="/admin" class="nav-link-item drop-trigger">Login
+                  </a>
+                  
+                </li>
+                <li class="nav-item nav-item-has-children">
+                  <a href="/contact-us" class="nav-link-item drop-trigger">Contact us
+                  </a>
+                  
+                </li>
+        
+              </ul>
+            </nav>
+          </div>
+          <div class="header-btn ">
+            <a class="btn btn btn-electric-violet-2 btn--header-inner text-white rounded-50 shadow--electric-violet-2-4 ms-auto ms-lg-4 d-none d-sm-flex" href="/sign_up">
+              Get Started
+            </a>
+          </div>
+          <!-- mobile menu trigger -->
+          <div class="mobile-menu-trigger">
+            <span></span>
+          </div>
+          <!--/.Mobile Menu Hamburger Ends-->
+        </nav>
+      </div>
+    </header>
+        
+    <!-- End of new HTML -->
+
+{%endblock%}
+
+{%block footer%}
+
+{%endblock%}
+
