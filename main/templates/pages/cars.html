@@ -1,0 +1,77 @@
+{% extends "base/admin_base.html" %}
+{% load static %}
+<!DOCTYPE html> 
+<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="gradient" data-menu-styles="dark">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    {% block content %}
+  <!-- PAGE -->
+  <div class="page">
+
+    <!-- MAIN-CONTENT -->
+                    <!-- PAGE HEADER -->
+                    <div class="d-sm-flex d-block align-items-center justify-content-between page-header-breadcrumb">
+                        <h4 class="fw-medium mb-0">Products</h4>
+                        <div class="ms-sm-1 ms-0">
+                            <nav>
+                                <ol class="breadcrumb mb-0">
+                                    <li class="breadcrumb-item"><a href="javascript:void(0);">Ecommerce</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Products</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- END PAGE HEADER -->
+
+                    <!-- APP CONTENT -->
+                    <div class="main-content app-content">
+                        <div class="container-fluid">
+                            <div class="my-4">
+                                <div class="col-xxl-9 col-xl-8 col-lg-8 col-md-12">
+                                    <section class = "py-5 container mt-5 ml-8">
+                                        <div class = "row py-5-lg">
+                                            <div class = "col-lg-6 col-md-8 mx-auto">
+                                                <h1 class = "fw-light">Automax</h1>
+                                                <p class = "lead text-muted">The best place to buy or sell a car made it easier</p>
+                                                <a href = "" class = "btn btn-primary my-2" > List your car </a>
+                                            </div>
+                                           
+                                            <div class = "col-lg-6 col-md-8 mx-auto">
+                                                <!--  Listing Filtering  --> 
+                                                
+                                            </div>
+
+                                            <div class="album py-5 bg-light">
+                                                <div class = "container">
+                                                    <!-- Add this debug text at the top of cars.html -->
+                                                    
+
+                                                    <div class = "row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                                        {% for listing in listings %}
+                                                        <div class = "col">
+                                                            <p >{{ listing.id }}</p>
+                                                            
+                                                        </div>
+                                                         
+                                                        {% endfor %}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+
+
+
+
+    
+</div>
+
+    {% endblock %}
+    <body>
+
+</html>

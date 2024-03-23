@@ -1,8 +1,8 @@
 <!-- templates/index.html -->
 
-{% extends "base/header.html" %}
-
+{% extends "base/_base.html" %}
 {% block content %}
+{% load static %}
 
 <div class="page-title-content text-center bg-default-3">
     <div class="container">
@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="shape">
-      <img class="w-100" src="static/image/png/inner-banner-shape.png" alt="">
+      <img class="w-100" src="{% static 'image/png/inner-banner-shape.png' %}" alt="">
     </div>
   </div>
   <!--/ .Page Title Area -->
@@ -26,7 +26,7 @@
       <div class="row align-items-center justify-content-center">
         <div class="col-xl-6 col-lg-6 col-md-8 col-xs-10" data-aos="fade-right" data-aos-duration="500" data-aos-once="true">
           <div class="about-us__image">
-            <img class="w-100" src="static/image/home-5/about-us-l5-img.png" alt="" />
+            <img class="w-100" src="{% static 'image/home-5/about-us-l5-img.png' %}" alt="" />
             <!-- Video Button -->
             <a class="video-btn btn-primary popup-btn sonar-emitter" href="https://www.youtube.com/watch?v=LWZ7iytIA6k"> <i class="fa fa-play"></i> </a>
           </div>
@@ -95,7 +95,7 @@
       <div class="row align-items-center justify-content-center">
         <div class="col-lg-6 col-md-12">
           <div class="feature-content--l3__image mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="500" data-aos-once="true">
-            <img class="w-100" src="static/image/home-3/feature-l3-image.png" alt="" />
+            <img class="w-100" src="{% static 'image/home-3/feature-l3-image.png'%} " alt="" />
           </div>
         </div>
         <div class="col-lg-6 col-md-12">
@@ -149,7 +149,7 @@
           </div>
           <div class="col-xxl-5 col-lg-4 col-md-6 col-xs-9" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
             <div class="content-img text-center">
-              <img class="w-100" src="static/image/home-5/content-1-l5-img.png" alt="">
+              <img class="w-100" src="{% static 'image/home-5/content-1-l5-img.png'%}" alt="">
             </div>
           </div>
           <div class="col-xl-3 col-lg-4 col-md-6 col-xs-9 order-3" data-aos="fade-left" data-aos-duration="500" data-aos-once="true">
@@ -193,7 +193,7 @@
     </div>
     <div class="testimonial-slider--l7" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" data-aos-once="true">
       <div class="card card--testimonial-l7">
-        <img class="w-100" src="static/image/home-6/team-member-1.png" alt="">
+        <img class="w-100" src="{% static 'image/home-6/team-member-1.png' %}" alt="">
         <div class="card__hover">
           <div class="card__user-media">
             <h4 class="card__user-media__name">Charles Patterson</h4>
@@ -226,7 +226,7 @@
         </div>
       </div>
       <div class="card card--testimonial-l7">
-        <img class="w-100" src="static/image/home-6/team-member-2.png" alt="">
+        <img class="w-100" src="{% static 'image/home-6/team-member-2.png' %}" alt="">
         <div class="card__hover">
           <div class="card__user-media">
             <h4 class="card__user-media__name">John Doe</h4>
@@ -259,7 +259,7 @@
         </div>
       </div>
       <div class="card card--testimonial-l7">
-        <img class="w-100" src="static/image/home-6/team-member-3.png" alt="">
+        <img class="w-100" src="{% static 'image/home-6/team-member-3.png' %}" alt="">
         <div class="card__hover">
           <div class="card__user-media">
             <h4 class="card__user-media__name">Tiana Dokidis</h4>
@@ -292,7 +292,7 @@
         </div>
       </div>
       <div class="card card--testimonial-l7">
-        <img class="w-100" src="static/image/home-6/team-member-4.png" alt="">
+        <img class="w-100" src="{% static 'image/home-6/team-member-4.png'%}" alt="">
         <div class="card__hover">
           <div class="card__user-media">
             <h4 class="card__user-media__name">Stephan Lawrence</h4>
@@ -325,7 +325,7 @@
         </div>
       </div>
       <div class="card card--testimonial-l7">
-        <img class="w-100" src="static/image/home-6/team-member-3.png" alt="">
+        <img class="w-100" src="{% static 'image/home-6/team-member-3.png' %}" alt="">
         <div class="card__hover">
           <div class="card__user-media">
             <h4 class="card__user-media__name">Stephan Lawrence</h4>
@@ -358,7 +358,7 @@
         </div>
       </div>
       <div class="card card--testimonial-l7">
-        <img class="w-100" src="static/image/home-6/team-member-5.png" alt="">
+        <img class="w-100" src="{% static 'image/home-6/team-member-5.png' %}" alt="">
         <div class="card__hover">
           <div class="card__user-media">
             <h4 class="card__user-media__name">Talan Bergson</h4>
@@ -402,6 +402,6 @@
 
 {% block footer%}
   
-{% endblock footer%}
+{% endblock%}
 
 
