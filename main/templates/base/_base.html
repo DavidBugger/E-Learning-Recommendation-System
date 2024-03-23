@@ -38,7 +38,6 @@
 
    {%block header%}
 
-
     <header class="site-header site-header--menu-center  dynamic-sticky-bg mt-3 mt-lg-0 site-header--absolute site-header--sticky">
       <div class="container">
         <nav class="navbar site-navbar">
@@ -115,9 +114,8 @@
       </div>
     </header>
     {%endblock header%}
-
     {% comment %} <div class="container mx-auto mt-4 "> {% endcomment %}
-        <body>
+
         {% block content %}
         {% if messages %}
         {%for message in messages %}
@@ -129,9 +127,9 @@
         {% endif %}
         {% endblock content %}
     {% comment %} </div> {% endcomment %}
-      </body>
+   
 
-  {% block footer%}
+  <footer>
      <!-- Footer Area -->
   <div class="promo-area promo-area--inner-about bg-electric-violet-2">
     <div class="container">
@@ -264,11 +262,11 @@
       </div>
     </div>
   </div>
+</footer>
   <!--/ .Footer Area -->
-    {% endblock footer%}
+   
 
     {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script> {% endcomment %}
-
     <!-- Plugin's Scripts -->
   <script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
   <script src="{% static 'plugins/jquery/jquery-migrate.min.js' %}"></script>

@@ -1,7 +1,8 @@
 
 from django.shortcuts import render,redirect
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages 
 from django.views import View
 
@@ -34,6 +35,11 @@ def login_view(request):
 # def register_view(request):
 #     register_form = UserCreationForm()
 #     return render (request, 'views/register.html', {'register_form' : register_form})
+
+@login_required
+def logout_view(request):
+    logout(request)
+    return redirect('main')
 
 # Class based approach of rendering views 
 class RegisterView(View):
