@@ -75,8 +75,30 @@ def list_view(request):
     return render(request, 'views/list.html', {'listing_form': listing_form, 'location_form': location_form, })
 
 @login_required
-
-def listing_view(request):
-    return render(request, 'views/listing.html', {'name': 'listing'})
+def listing_view(request, id):
+    try:
+        listing = Listing.objects.get(id=id)
+        if listing is None:
+            raise Exception
+        return render(request, 'views/listing.html', {'listing': listing, })
+    except Exception as e:
+        messages.error(request, f'Invalid UUID {id} was provided for listing.')
+        return redirect('home')
+    
+@login_required
+def edit_view(request, id):
+    try:
+        listing = Listing.objects.get(id=id)
+        if listing is None:
+            raise Exception
+        if request.method == 'POST':
+            pass
+        else:
+            pass 
+    except Exception as e:
+        messages.error(request, f'An error has occured while trying to edit  the listing.')
+        return redirect('home')
+        # return render(request, 'views/edit.html', {})
+    
     
         

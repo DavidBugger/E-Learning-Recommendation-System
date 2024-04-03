@@ -612,7 +612,7 @@
                         <!-- End::header-link|dropdown-toggle -->
                         {% if request.user.is_authenticated %}
                         <ul class="dropdown-menu  border-0 main-header-dropdown  overflow-hidden header-profile-dropdown" aria-labelledby="mainHeaderProfile">
-                            <li><a class="dropdown-item border-bottom" href="profile.html"><i class="fs-13 me-2 bx bx-user"></i>Profile</a></li>
+                            <li><a class="dropdown-item border-bottom" href="{% url 'profile' %}"><i class="fs-13 me-2 bx bx-user"></i>Profile</a></li>
                             <li><a class="dropdown-item border-bottom" href="mail.html"><i class="fs-13 me-2 bx bx-comment"></i>Message</a></li>
                             <li><a class="dropdown-item border-bottom" href="mail-settings.html"><i class="fs-13 me-2 bx bx-cog"></i>Settings</a></li>
                             <li><a class="dropdown-item border-bottom" href="faqs.html"><i class="fs-13 me-2 bx bx-help-circle"></i>Help</a></li>
