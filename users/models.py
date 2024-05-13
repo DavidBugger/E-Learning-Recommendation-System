@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 from localflavor.us.models import USStateField, USZipCodeField
-
 from .utils import user_upload_directory_path
 
 # Create your models here.

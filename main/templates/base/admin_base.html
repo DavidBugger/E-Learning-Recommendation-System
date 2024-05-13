@@ -10,6 +10,13 @@
         <meta name="Description" content="E learning Recommendation System">
         <meta name="Author" content="Dev Dave">
         <meta name="keywords" content="E learning Recommendation System">
+        <!-- Jquery CDN -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+        <!-- Toast R-->
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         
         <!-- TITLE -->
 		{% block title %}
@@ -40,11 +47,26 @@
         <script src="{% static 'assets/libs/choices.js/public/assets/scripts/choices.min.js' %} "></script>
         <!-- JSVECTOR MAPS CSS -->
         <link rel="stylesheet" href="{% static 'assets/libs/jsvectormap/css/jsvectormap.min.css' %}">
+          
+        <!-- SWIPER CSS -->
+        <link rel="stylesheet" href="{% static 'assets/libs/swiper/swiper-bundle.min.css' %}">
 
 
 	</head>
     <body>
+
+        {% if messages %}
+        {% for message in messages %}
+        <div {% if message.tags %} class="alert alert-{{ message.tags }}" {% endif %}>
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+    
+
         {% block header %}
+
+        
         
           <!-- HEADER -->
           <header class="app-header">
@@ -597,7 +619,7 @@
                         <!-- End::header-link|dropdown-toggle -->
                         {% if request.user.is_authenticated %}
                         <ul class="dropdown-menu  border-0 main-header-dropdown  overflow-hidden header-profile-dropdown" aria-labelledby="mainHeaderProfile">
-                            <li><a class="dropdown-item border-bottom" href="profile.html"><i class="fs-13 me-2 bx bx-user"></i>Profile</a></li>
+                            <li><a class="dropdown-item border-bottom" href="{% url 'profile' %}"><i class="fs-13 me-2 bx bx-user"></i>Profile</a></li>
                             <li><a class="dropdown-item border-bottom" href="mail.html"><i class="fs-13 me-2 bx bx-comment"></i>Message</a></li>
                             <li><a class="dropdown-item border-bottom" href="mail-settings.html"><i class="fs-13 me-2 bx bx-cog"></i>Settings</a></li>
                             <li><a class="dropdown-item border-bottom" href="faqs.html"><i class="fs-13 me-2 bx bx-help-circle"></i>Help</a></li>
@@ -630,7 +652,7 @@
          <aside class="app-sidebar" id="sidebar">
             <!-- Start::main-sidebar-header -->
             <div class="main-sidebar-header">
-                <a href="index.html" class="header-logo">
+                <a href="{% url 'home'%}" class="header-logo">
                     <h5  class ="text-primary">E-learning App</h4>
                     {% comment %} <img src="{% static 'assets/images/brand-logos/desktop-logo.png' %}" alt="logo" class="desktop-logo">
                     <img src="{% static 'assets/images/brand-logos/toggle-logo.png' %}" alt="logo" class="toggle-logo">
@@ -1512,6 +1534,13 @@
     <script src="{% static 'assets/libs/%40simonwep/pickr/pickr.es5.min.js' %}"></script>
     <!-- DEFAULTMENU JS -->
     <script src="{% static 'assets/js/defaultmenu.js' %}"></script>
+        
+    <!-- SWIPER JS -->
+    <script src="{% static 'assets/libs/swiper/swiper-bundle.min.js' %}"></script>
+
+    <!-- INTERNAL PRODUCT-DETAILS JS -->
+    <script src="{% static 'assets/js/product-details.js' %}"></script>
+
     <!-- JSVECTOR MAPS JS -->
     <script src="{% static 'assets/libs/jsvectormap/js/jsvectormap.min.js' %}"></script>
     <script src="{% static 'assets/libs/jsvectormap/maps/world-merc.js' %}"></script>
